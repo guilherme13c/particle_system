@@ -1,11 +1,12 @@
 CC		= g++
-TARGET 	= main.exe
+TARGET 	= bin/main.exe
 CFLAGS	= -g -O3
 LIBS	= -lm
-SRC		= main.cpp particles.cpp
+SRC		= src/main.cpp src/particles.cpp
+INCLUDE = include
 
 all:
-	$(CC) -o $(TARGET) $(SRC) $(CFLAGS) $(LIBS)
+	$(CC) -o $(TARGET) $(SRC) $(CFLAGS) $(LIBS) -I$(INCLUDE)
 
 clean:
 	rm *.exe *.txt
